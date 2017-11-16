@@ -1,5 +1,6 @@
 package palsy.customerchecker;
 
+import android.app.Dialog;
 import android.app.Service;
 import android.content.Intent;
 import android.graphics.PixelFormat;
@@ -25,18 +26,13 @@ public class CallingService extends Service  {
     public static final String EXTRA_CALL_NUMBER = "call_number";
     protected View rootView;
 
-
-    @InjectView(R.id.tv_call_number)
-    TextView tv_call_number;
-
-
+    @InjectView(R.id.description)
+    TextView description;
 
     String call_number;
 
     private WindowManager windowManager;
     WindowManager.LayoutParams params;
-
-
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -111,11 +107,15 @@ public class CallingService extends Service  {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         windowManager.addView(rootView, params);
-        setExtra(intent);
 
+        setExtra(intent);
+        description.setText("모르는번호입니다.");
+
+        /*
         if (!TextUtils.isEmpty(call_number)) {
-            tv_call_number.setText(call_number);
+            description.setText(call_number);
         }
+        */
         return START_REDELIVER_INTENT;
     }
 
