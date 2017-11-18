@@ -10,13 +10,13 @@
         android:id="@+id/a"
         android:gravity="center"
         android:background="#DA5F6A"
-        android:src="@drawable/ic_block_white_48dp"
+        android:src="@drawable/ic_highlight_off_white_36dp"
         android:scaleType="fitCenter" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="테스트"
+        android:text="확인"
         android:id="@+id/description"
         android:layout_below="@+id/a"
         android:layout_marginTop="20dp"
@@ -29,15 +29,23 @@
         android:gravity="center_horizontal" />
 
     <Button
+        android:id="@+id/btn_ok"
+
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="OK"
-        android:id="@+id/btn_close"
+        android:layout_height="50dp"
         android:gravity="center_vertical|center_horizontal"
         android:layout_below="@+id/description"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/ic_clear_blue"
+        android:background="@drawable/buttonshape"
+        android:text="OK"
         android:layout_centerHorizontal="true"
-        android:textColor="#ffffffff" />
+
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        />
 
 </RelativeLayout>

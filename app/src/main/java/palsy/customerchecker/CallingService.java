@@ -136,7 +136,7 @@ public class CallingService extends Service  {
         removePopup();
     }
 
-    @OnClick(R.id.btn_close)
+    @OnClick(R.id.btn_ok)
     public void removePopup() {
         if (rootView != null && windowManager != null) {
             windowManager.removeView(rootView);
